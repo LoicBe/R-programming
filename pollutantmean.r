@@ -21,11 +21,11 @@ pollutantmean<-function(directory, pollutant, id = 1:332){
 
                 #find the match filename        
                 if(i<10){
-                        namefile<-paste(directory,"00",i,".csv",sep="")
+                        namefile<-paste(directory,"/","00",i,".csv",sep="")
                 }else if (i<100){
-                        namefile<-paste(directory,"0",i,".csv",sep="")
+                        namefile<-paste(directory,"/","0",i,".csv",sep="")
                 }else{
-                        namefile<-paste(directory,i,".csv",sep="") 
+                        namefile<-paste(directory,"/",i,".csv",sep="") 
                 }
                 
                 airQuality<-read.table(namefile,sep=",",header=TRUE)
